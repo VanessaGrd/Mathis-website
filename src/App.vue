@@ -38,6 +38,8 @@ header{
   width: 100vw;
   overflow-y: auto;
   position: relative;
+  justify-content: center;
+  display: flex;
 }
 
 .background-video {

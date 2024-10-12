@@ -103,7 +103,7 @@ form {
 .input input {
   border-radius: 5px;
   height: 30px;
-  width: 12rem;
+  width: 15rem;
   margin-bottom: 10px;
   padding: 5px;
   border: solid 1.5px #d3d3d3;

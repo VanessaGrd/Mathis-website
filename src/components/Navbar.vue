@@ -37,7 +37,26 @@ import { RouterLink } from "vue-router";
 .linksContainer a {
   text-decoration: none;
   list-style-type: none;
-  color: #D6E1FF;
+  color: #d6e1ff;
   font-size: 20px;
+  position: relative;
+  transition: color 0.3s ease; 
+}
+.linksContainer a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #EC4048; /* Couleur de soulignement au hover */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.linksContainer a:hover {
+  transform: scale(1.05);
+}
+.linksContainer a:hover::before {
+  width: 100%;
+  left: 0;
 }
 </style>
