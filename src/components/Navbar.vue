@@ -37,6 +37,7 @@ import { RouterLink } from "vue-router";
 .linksContainer a {
   text-decoration: none;
   list-style-type: none;
-  color: black;
+  color: #D6E1FF;
+  font-size: 20px;
 }
 </style>

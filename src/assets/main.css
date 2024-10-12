@@ -1,9 +1,13 @@
 *{
   margin: 0;
   padding: 0;
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-family: 'RetroGaming', sans-serif;
+}
+
+@font-face {
+  font-family: 'RetroGaming'; /* Nom que tu veux donner à la police */
+  src: url('./font/retrogaming.ttf'); /* Chemin vers le fichier de police */
+  font-weight: normal;
   font-style: normal;
 }
 #app{

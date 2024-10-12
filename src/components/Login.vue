@@ -25,14 +25,16 @@
 import supabase from "../../config/supabaseClient";
 import { useToast } from "vue-toastification";
 import { useRouter } from "vue-router"; // Importer useRouter
-import { ref } from 'vue'; // Importer ref
+import { ref } from "vue"; // Importer ref
 
 const toast = useToast();
 export default {
-  setup() { // Utilisation de setup()
+  setup() {
+    // Utilisation de setup()
     const toast = useToast();
     const router = useRouter(); // Obtenir l'instance du router
-    const input = ref({ // Utilisation de ref pour les inputs
+    const input = ref({
+      // Utilisation de ref pour les inputs
       email: "",
       password: "",
     });
@@ -66,11 +68,13 @@ export default {
 <style>
 .loginForm {
   width: 30rem;
-  height: 20rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 250px;
+  background-color: rgba(237, 231, 231, 0.4);
+  border-radius: 10px;
 }
 
 form {
@@ -82,11 +86,15 @@ form {
 }
 
 .loginForm h2 {
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #141726;
 }
+
 .input {
   display: flex;
   flex-direction: column;
+  color: #141726;
 }
 
 .input label {
@@ -113,16 +121,19 @@ form {
 button {
   border-radius: 5px;
   height: 40px;
-  width: 100px;
+  width: auto;
   margin-top: 20px;
+  padding: 10px;
   border: none;
-  background-color: #2870bd;
-  color: aliceblue;
+  background-color: #141726;
+  color: #D6E1FF;
   font-weight: 600;
+  font-size: 16px;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #104d87;
+  background-color: #D6E1FF;
+  color: #141726;
 }
 </style>
