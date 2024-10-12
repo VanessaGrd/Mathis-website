@@ -3,8 +3,8 @@
     <h2>Connexion</h2>
     <form name="login-form">
       <div class="input">
-        <label for="username">Nom</label>
-        <input id="username" type="text" v-model="input.username" />
+        <label for="email">Email</label>
+        <input id="username" type="text" v-model="input.email" />
       </div>
       <div class="input">
         <label for="password">Mot de passe</label>
@@ -22,28 +22,43 @@
 </template>
 
 <script>
+import supabase from "../../config/supabaseClient";
+import { useToast } from "vue-toastification";
+import { useRouter } from "vue-router"; // Importer useRouter
+import { ref } from 'vue'; // Importer ref
+
+const toast = useToast();
 export default {
-  data() {
-    return {
-      input: {
-        username: "",
-        password: "",
-      },
-    };
-  },
-  methods: {
-    login() {
-      if (this.input.username != "" && this.input.password != "") {
-       if(this.input.username === "Mathis16" && this.input.password === "16052016!!"){
-        console.log("connexion réussie");
-       } else{
-        console.log("Username ou mot de passe incorrect");
-       }
-      
-      } else {
-        console.log("Données manquantes");
+  setup() { // Utilisation de setup()
+    const toast = useToast();
+    const router = useRouter(); // Obtenir l'instance du router
+    const input = ref({ // Utilisation de ref pour les inputs
+      email: "",
+      password: "",
+    });
+    const login = async () => {
+      try {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email: input.value.email, // Accéder aux valeurs avec input.value
+          password: input.value.password,
+        });
+        if (error) throw error;
+
+        if (data.session) {
+          localStorage.setItem("sb-access-token", data.session.access_token);
+          toast.success("Bienvenue Mathis !");
+          router.push("/dashboard"); // Redirection après connexion réussie
+        }
+      } catch (error) {
+        console.error(error);
+        toast.error("Erreur lors de la connexion");
       }
-    },
+    };
+
+    return {
+      input,
+      login, // Retourner la méthode login
+    };
   },
 };
 </script>

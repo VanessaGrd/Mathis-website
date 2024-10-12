@@ -1,41 +1,40 @@
 <script setup>
-
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
-<div class="navbar">
-  <img class="avatar" src="../assets/avatar.jpeg" alt="avatar">
-  <div class="linksContainer">
-    <a href="/dashboard">Accueil</a>
-    <a href="/">Déconnexion</a>
+  <div class="navbar">
+    <img class="avatar" src="../assets/avatar.jpeg" alt="avatar" />
+    <div class="linksContainer">
+      <RouterLink to="/dashboard">Accueil</RouterLink>
+      <RouterLink to="/logout">Déconnexion</RouterLink>
+    </div>
   </div>
-</div>
 </template>
 
 <style scoped>
-.navbar{
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
-  height: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: red;
+  padding: 5px;
 }
-.avatar{
+.avatar {
   border-radius: 100%;
   width: 50px;
 }
-.linksContainer{
+.linksContainer {
   width: 30%;
   display: flex;
   justify-content: space-around;
 }
 
-.linksContainer a{
+.linksContainer a {
   text-decoration: none;
   list-style-type: none;
   color: black;
