@@ -1,6 +1,7 @@
 import { useToast } from "vue-toastification";
 import Login from "./components/Login.vue";
 import Dashboard from "./Dashboard.vue";
+import Memory from "./Memory.vue";
 
 function isAuthenticated() {
   return !!localStorage.getItem("sb-access-token"); // Vérifie si le token existe
@@ -29,6 +30,6 @@ export const routes = [
   },
   {path: "/logout", component: Login,
     beforeEnter: logout
-  }
- 
+  },
+  {path: "/dashboard/memory", component: Memory}
 ];

@@ -11,6 +11,8 @@
         <input id="password" type="password" v-model="input.password" />
       </div>
       <button
+        @click="playSound"
+        id="retroButton"
         class="btn btn-outline-dark"
         type="submit"
         v-on:click.prevent="login()"
@@ -38,6 +40,13 @@ export default {
       email: "",
       password: "",
     });
+
+    const playSound = () => {
+      const audio = new Audio("public/arcade.mp3");
+      audio.currentTime = 0;
+      audio.play();
+    };
+
     const login = async () => {
       try {
         const { data, error } = await supabase.auth.signInWithPassword({
@@ -59,7 +68,8 @@ export default {
 
     return {
       input,
-      login, // Retourner la méthode login
+      login,
+      playSound, // Retourner la méthode login
     };
   },
 };
@@ -72,9 +82,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 250px;
+  margin-top: 200px;
   background-color: rgba(237, 231, 231, 0.4);
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 form {
@@ -126,14 +137,14 @@ button {
   padding: 10px;
   border: none;
   background-color: #141726;
-  color: #D6E1FF;
+  color: #d6e1ff;
   font-weight: 600;
   font-size: 16px;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #D6E1FF;
+  background-color: #d6e1ff;
   color: #141726;
 }
 </style>

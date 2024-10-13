@@ -8,14 +8,15 @@ import { RouterView } from 'vue-router';
   <video autoplay loop muted class="background-video">
     <source src="./assets/videobackground.mp4" type="video/mp4">
 </video>
-  <div class="app-container">
-    <header>
-      <Navbar/>
-    </header>
-    
-    <main class="main-content">
-    <RouterView/>
 
+<div class="app-container">
+  <img class="avatar" src="./assets/avatar.jpeg" alt="avatar" />
+  <header>
+    <Navbar/>    
+  </header>
+  
+  <main class="main-content">
+    <RouterView/>
   </main>
 </div>
 </template>
@@ -28,8 +29,8 @@ import { RouterView } from 'vue-router';
   width: 100vw;
 }
 
-header{
-  height: 60px;
+.avatar {
+  width: 120px;
 }
 
 .main-content{
