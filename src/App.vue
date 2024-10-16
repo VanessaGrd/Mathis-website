@@ -1,28 +1,27 @@
-<script setup>
-import Navbar from './components/Navbar.vue';
-import { RouterView } from 'vue-router';
-
-</script>
-
 <template>
   <video autoplay loop muted class="background-video">
-    <source src="./assets/videobackground.mp4" type="video/mp4">
-</video>
+    <source src="./assets/videobackground.mp4" type="video/mp4" />
+  </video>
 
-<div class="app-container">
-  <img class="avatar" src="./assets/avatar.jpeg" alt="avatar" />
-  <header>
-    <Navbar/>    
-  </header>
-  
-  <main class="main-content">
-    <RouterView/>
-  </main>
-</div>
+  <div class="app-container">
+    <img class="avatar" src="./assets/avatar.jpeg" alt="avatar" />
+    <header>
+      <Navbar />
+    </header>
+
+    <main class="main-content">
+      <RouterView />
+    </main>
+  </div>
 </template>
 
+<script setup>
+import { RouterView } from "vue-router";
+import Navbar from "./components/Navbar.vue";
+</script>
+
 <style scoped>
-.app-container{
+.app-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -33,7 +32,7 @@ import { RouterView } from 'vue-router';
   width: 120px;
 }
 
-.main-content{
+.main-content {
   flex-grow: 1;
   height: calc(100vh-60px);
   width: 100vw;
@@ -51,5 +50,9 @@ import { RouterView } from 'vue-router';
   height: 100%; /* Assure que la vidéo prend toute la hauteur */
   object-fit: cover; /* Pour que la vidéo couvre tout le conteneur sans déformation */
   z-index: -1; /* Permet de mettre la vidéo en arrière-plan */
+}
+
+.card{
+  background-color: blue;
 }
 </style>

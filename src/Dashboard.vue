@@ -1,7 +1,11 @@
 <template>
   <div class="button-container">
-    <RouterLink class="button neon-button" to="dashboard/memory"
-      > <img class="pikatchu-picture" src="./assets/pikatchu.png" alt="pikatchu">
+    <RouterLink class="button neon-button" to="/dashboard/memory">
+      <img
+        class="pikatchu-picture"
+        src="./assets/pikatchu.png"
+        alt="pikatchu"
+      />
       Memory</RouterLink
     >
     <RouterLink class="button neon-button" to="dashboard/todo"
@@ -10,7 +14,15 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import Memory from "./Memory.vue";
+
+export default {
+  components: {
+    Memory,
+  },
+};
+</script>
 
 <style>
 .button-container {
@@ -72,7 +84,7 @@
 .neon-button:hover::before {
   background: rgba(255, 255, 255, 0.15);
 }
-.pikatchu-picture{
+.pikatchu-picture {
   width: 150px;
 }
 </style>
