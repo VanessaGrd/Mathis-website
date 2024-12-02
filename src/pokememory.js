@@ -32,20 +32,20 @@ export const loadPokemon = async () => {
 };
 
 // Réinitialiser le jeu
-export const resetGame = async (gameElement) => {
+export const resetGame = async (gameElement, handleCardClick) => {
   gameElement.innerHTML = "";
   isPaused = true;
   firstPick = null;
   matches = 0;
   setTimeout(async () => {
     const loadedPokemon = await loadPokemon();
-    displayPokemon([...loadedPokemon, ...loadedPokemon], gameElement);
+    displayPokemon([...loadedPokemon, ...loadedPokemon], gameElement, handleCardClick);
     isPaused = false;
   }, 200);
 };
 
 // Afficher les Pokémon et attacher les événements de clic
-export const displayPokemon = (pokemon, gameElement) => {
+export const displayPokemon = (pokemon, gameElement, handleCardClick) => {
   pokemon.sort((_) => Math.random() - 0.5);
   const pokemonHTML = pokemon
     .map((pokemon) => {
@@ -57,7 +57,7 @@ export const displayPokemon = (pokemon, gameElement) => {
     data-pokename="${pokemon.name}">
     <div class="front"></div>
     <div class="back rotated" style="background-color:${color}">
-    <img src="${pokemon.sprites.front_default}" alt=${pokemon.name}
+    <img src="${pokemon.sprites.front_default}" alt=${pokemon.name}/>
     <h2>${pokemon.name}</h2>
     </div>
     </div>`;
@@ -68,13 +68,13 @@ export const displayPokemon = (pokemon, gameElement) => {
   // Attacher les événements de clic après le rendu des cartes
   const cards = gameElement.querySelectorAll(".card");
   cards.forEach((card) => {
-    card.addEventListener("click", clickCard);
+    card.addEventListener("click", (e) => handleCardClick(card));
   });
 };
 
 // Gérer le clic sur une carte
-const clickCard = (e) => {
-  const pokemonCard = e.currentTarget;
+export const clickCard = (card) => {
+  const pokemonCard = card;
   const [front, back] = getFrontAndBackFromCard(pokemonCard);
   // Ignorer le clic si la carte est déjà retournée ou si le jeu est en pause
   if (front.classList.contains("rotated") || isPaused) {

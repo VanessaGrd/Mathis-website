@@ -143,7 +143,6 @@ button {
 }
 
 button:hover {
-  cursor: pointer;
   background-color: #d6e1ff;
   color: #141726;
 }
