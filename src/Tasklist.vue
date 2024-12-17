@@ -122,7 +122,7 @@ const sortedTodo = () => {
 .todoItem {
   background-color: black;
   color: #ec4048;
-  border: 2px  #ec4048;
+  border: 2px #ec4048;
   margin: 10px 0;
   padding: 10px;
   font-size: 14px;
@@ -150,6 +150,8 @@ const sortedTodo = () => {
 input[type="checkbox"] {
   accent-color: #ec4048; /* Couleur de la case cochée */
   transform: scale(1.5);
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 /* Label pour masquer les tâches */

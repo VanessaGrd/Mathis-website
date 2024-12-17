@@ -3,17 +3,18 @@ import Login from "./components/Login.vue";
 import Dashboard from "./Dashboard.vue";
 import Memory from "./Memory.vue";
 import Tasklist from "./Tasklist.vue";
+import Drump from "./Drump.vue";
 
 function isAuthenticated() {
   return !!localStorage.getItem("sb-access-token"); // Vérifie si le token existe
 }
 
 const logout = (to, from, next) => {
-localStorage.removeItem("sb-access-token");
-const toast = useToast();
-toast.success("Déconnexion réussie");
-next("/")
-}
+  localStorage.removeItem("sb-access-token");
+  const toast = useToast();
+  toast.success("Déconnexion réussie");
+  next("/");
+};
 export const routes = [
   { path: "/", component: Login },
   {
@@ -25,13 +26,12 @@ export const routes = [
         next();
       } else {
         next("/");
-        toast.error("Tu dois être connecté !")
+        toast.error("Tu dois être connecté !");
       }
     },
   },
-  {path: "/logout", component: Login,
-    beforeEnter: logout
-  },
-  {path: "/dashboard/memory", component: Memory},
-  {path: "/dashboard/todo", component: Tasklist}
+  { path: "/logout", component: Login, beforeEnter: logout },
+  { path: "/dashboard/memory", component: Memory },
+  { path: "/dashboard/todo", component: Tasklist },
+  { path: "/dashboard/drump", component: Drump },
 ];

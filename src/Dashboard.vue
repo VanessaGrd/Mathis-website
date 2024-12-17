@@ -8,8 +8,19 @@
       />
       Memory</RouterLink
     >
-    <RouterLink class="button neon-button" to="dashboard/todo"
-      >Liste de tâches</RouterLink
+    <RouterLink class="button neon-button" to="dashboard/todo">
+      <img
+        class="pikatchu-picture"
+        src="./assets/tasklist.png"
+        alt="tasklist"
+      />Liste de tâches</RouterLink
+    >
+    <RouterLink class="button neon-button" to="dashboard/drump">
+      <img
+        class="pikatchu-picture"
+        src="./assets/drump.png"
+        alt="drump"
+      />Partitons</RouterLink
     >
   </div>
 </template>
