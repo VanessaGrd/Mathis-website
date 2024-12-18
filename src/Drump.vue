@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import AlphaTab from "@coderline/alphatab";
+import { AlphaTab } from "@coderline/alphatab";
 
 export default {
   name: "DrumSheetViewer",
