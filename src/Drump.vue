@@ -34,20 +34,20 @@ export default {
         {
           id: 1,
           title: "7 Nation Army",
-          pdf: "/src/assets/partitions/7NationArmy.pdf",
-          audio: "/src/assets/sons/7NationArmy.mp3",
+          pdf: "/public/partitions/7NationArmy.pdf",
+          audio: "/public/sons/7NationArmy.mp3",
         },
         {
           id: 2,
           title: "Rolling in the deep",
-          pdf: "/src/assets/partitions/adele.pdf",
-          audio: "/src/assets/sons/adele.mp3",
+          pdf: "/public/partitions/adele.pdf",
+          audio: "/public/sons/adele.mp3",
         },
         {
           id: 3,
           title: "Hôtel California",
-          pdf: "/src/assets/partitions/hotelcalifornia.pdf",
-          audio: "/src/assets/sons/hotelcalifornia.mp3",
+          pdf: "/public/partitions/hotelcalifornia.pdf",
+          audio: "/public/sons/hotelcalifornia.mp3",
         },
       ],
     };
