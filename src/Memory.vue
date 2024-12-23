@@ -29,7 +29,7 @@ export default {
     },    
   },
   playSound () {
-    const audio = new Audio("public/arcade.mp3");
+    const audio = new Audio("/arcade.mp3");
     audio.currentTime = 0;
     audio.play();
   },

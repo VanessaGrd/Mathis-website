@@ -24,10 +24,10 @@
 </template>
 
 <script>
-import supabase from "../../config/supabaseClient";
-import { useToast } from "vue-toastification";
-import { useRouter } from "vue-router"; // Importer useRouter
 import { ref } from "vue"; // Importer ref
+import { useRouter } from "vue-router"; // Importer useRouter
+import { useToast } from "vue-toastification";
+import supabase from "../../config/supabaseClient";
 
 const toast = useToast();
 export default {
@@ -42,7 +42,7 @@ export default {
     });
 
     const playSound = () => {
-      const audio = new Audio("public/arcade.mp3");
+      const audio = new Audio("/arcade.mp3");
       audio.currentTime = 0;
       audio.play();
     };

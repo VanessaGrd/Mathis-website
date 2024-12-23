@@ -46,7 +46,7 @@ export default {
         {
           id: 3,
           title: "Hôtel California",
-          pdf: "/public/partitions/hotelcalifornia.pdf",
+          pdf: "/public  ",
           audio: "/public/sons/hotelcalifornia.mp3",
         },
       ],

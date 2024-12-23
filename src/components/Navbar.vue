@@ -8,26 +8,26 @@
 </template>
 
 <script>
-import { onMounted } from 'vue';
+import { onMounted } from "vue";
 
 export default {
-setup() {
-  const playSound = ()  => {
-    const audio = new Audio('/public/arcade.mp3');
-    audio.currentTime = 0 ;
-    audio.play().catch(error => {
+  setup() {
+    const playSound = () => {
+      const audio = new Audio("/arcade.mp3");
+      audio.currentTime = 0;
+      audio.play().catch((error) => {
         console.error("Erreur lors de la lecture du son :", error);
       });
-  };
+    };
 
-onMounted(() => {
-  const linkAudio = document.querySelectorAll(".nav-link");
-    linkAudio.forEach(link => {
-      link.addEventListener("click", playSound)
+    onMounted(() => {
+      const linkAudio = document.querySelectorAll(".nav-link");
+      linkAudio.forEach((link) => {
+        link.addEventListener("click", playSound);
+      });
     });
-});
-}
-}
+  },
+};
 </script>
 
 <style scoped>
