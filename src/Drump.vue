@@ -33,21 +33,23 @@ export default {
       partitions: [
         {
           id: 1,
-          title: "7 Nation Army",
-          pdf: "/partitions/7NationArmy.pdf",
-          audio: "/sons/7NationArmy.mp3",
+          title: "Harry Potter",
+          pdf: "/partitions/Harry-potter.pdf",
         },
         {
           id: 2,
-          title: "Rolling in the deep",
-          pdf: "/partitions/adele.pdf",
-          audio: "/sons/adele.mp3",
+          title: "Ratatouille",
+          pdf: "/partitions/Ratatouille.pdf",
         },
         {
           id: 3,
-          title: "Hôtel California",
-          pdf: "/partitions/hotelcalifornia.pdf",
-          audio: "/sons/hotelcalifornia.mp3",
+          title: "Ode à la joie",
+          pdf: "/partitions/ode-a-la-joie.pdf",
+        },
+        {
+          id: 4,
+          title: "Around the World",
+          pdf: "/partitions/Aroud the World.pdf",
         },
       ],
     };
@@ -87,7 +89,9 @@ export default {
   border: 2px solid #ec4048;
   border-radius: 5px;
   box-shadow: 0px 0px 10px #ec4048;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .partitionItem:hover {
@@ -110,7 +114,9 @@ export default {
   font-size: 14px;
   cursor: pointer;
   margin-bottom: 10px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btnDownload:hover {

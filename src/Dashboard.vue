@@ -18,8 +18,8 @@
     <RouterLink class="button neon-button" to="dashboard/drump">
       <img
         class="pikatchu-picture"
-        src="./assets/drump.png"
-        alt="drump"
+        src="./assets/pianio.jpg"
+        alt="piano"
       />Partitons</RouterLink
     >
   </div>
@@ -65,8 +65,11 @@ export default {
 .neon-button {
   border: 2px solid #d6e1ff;
   color: #d6e1ff;
-  box-shadow: 0 0 5px rgba(214, 225, 255, 1), 0 0 10px rgba(214, 225, 255, 1),
-    0 0 15px rgba(214, 225, 255, 1), 0 0 20px rgba(214, 225, 255, 1);
+  box-shadow:
+    0 0 5px rgba(214, 225, 255, 1),
+    0 0 10px rgba(214, 225, 255, 1),
+    0 0 15px rgba(214, 225, 255, 1),
+    0 0 20px rgba(214, 225, 255, 1);
   transition: 0.4s;
 }
 
@@ -74,8 +77,11 @@ export default {
   border: 2px solid #ec4048;
 
   background-color: rgba(237, 231, 231, 0.1);
-  box-shadow: 0 0 10px rgba(236, 64, 72, 1), 0 0 15px rgba(236, 64, 72, 1),
-    0 0 20px rgba(236, 64, 72, 1), 0 0 25px rgba(236, 64, 72, 1);
+  box-shadow:
+    0 0 10px rgba(236, 64, 72, 1),
+    0 0 15px rgba(236, 64, 72, 1),
+    0 0 20px rgba(236, 64, 72, 1),
+    0 0 25px rgba(236, 64, 72, 1);
   transform: scale(1.05);
 }
 
