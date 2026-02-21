@@ -49,7 +49,7 @@ export default {
         {
           id: 4,
           title: "Around the World",
-          pdf: "/partitions/Aroud-the-world.pdf",
+          pdf: "/partitions/Around-the-world.pdf",
         },
       ],
     };
