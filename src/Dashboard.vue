@@ -18,7 +18,7 @@
     <RouterLink class="button neon-button" to="dashboard/drump">
       <img
         class="pikatchu-picture"
-        src="./assets/pianio.jpg"
+        src="./assets/piano.jpg"
         alt="piano"
       />Partitons</RouterLink
     >
